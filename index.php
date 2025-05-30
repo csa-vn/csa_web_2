@@ -40,64 +40,102 @@ $nav_items = [
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to <?php echo $site_title; ?></h1>
-            <p>Your trusted partner for innovative solutions in Vietnam, maybe idk</p>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <?php
-            // Example of dynamically generated content
-            $features = [
-                [
-                    'title' => 'Expert Consulting',
-                    'description' => 'Professional consulting services tailored to your business needs.'
-                ],
-                [
-                    'title' => 'Quality Assurance',
-                    'description' => 'Rigorous testing and quality control processes.'
-                ],
-                [
-                    'title' => 'Innovative Solutions',
-                    'description' => 'Cutting-edge technology solutions for modern businesses.'
-                ]
-            ];
-            
-            foreach($features as $feature): ?>
-                <div class="feature-item">
-                    <h3><?php echo $feature['title']; ?></h3>
-                    <p><?php echo $feature['description']; ?></p>
+    <!-- Horizontal Scrolling Container -->
+    <div class="container-horizontal">
+        <!-- Panel 1: Hero -->
+        <section class="panel" id="panel1">
+            <div class="panel-content">
+                <h1 class="reveal-text">Welcome to <?php echo $site_title; ?></h1>
+                <p class="animate-element">Your trusted partner for innovative solutions in Vietnam</p>
+                <div class="animate-element">
+                    <button class="cta-button">Get Started</button>
                 </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- GSAP Scroll Demo Section -->
-    <section class="scroll-demo">
-        <div class="container">
-            <h2 class="reveal-text">GSAP Scroll Animation Demo</h2>
-            
-            <div class="scroll-item">
-                <h3>Fade In từ bên trái</h3>
-                <p>Element này sẽ slide vào từ bên trái khi scroll đến</p>
+        <!-- Panel 2: About -->
+        <section class="panel" id="panel2">
+            <div class="panel-content">
+                <h2 class="reveal-text">About Us</h2>
+                <p class="animate-element">We are a leading consulting company in Vietnam with over 10 years of experience delivering innovative solutions to businesses of all sizes.</p>
+                <div class="animate-element">
+                    <img src="assets/images/about-image.jpg" alt="About CSA Vietnam" style="max-width: 500px;">
+                </div>
             </div>
-            
-            <div class="scroll-item">
-                <h3>Fade In từ bên phải</h3>
-                <p>Element này sẽ slide vào từ bên phải</p>
+        </section>
+
+        <!-- Panel 3: Services -->
+        <section class="panel" id="panel3">
+            <div class="panel-content">
+                <h2 class="reveal-text">Our Services</h2>
+                <div class="services-grid animate-element">
+                    <?php
+                    // Example of dynamically generated content
+                    $features = [
+                        [
+                            'title' => 'Expert Consulting',
+                            'description' => 'Professional consulting services tailored to your business needs.'
+                        ],
+                        [
+                            'title' => 'Quality Assurance',
+                            'description' => 'Rigorous testing and quality control processes.'
+                        ],
+                        [
+                            'title' => 'Innovative Solutions',
+                            'description' => 'Cutting-edge technology solutions for modern businesses.'
+                        ]
+                    ];
+                    
+                    foreach($features as $feature): ?>
+                        <div class="service-item">
+                            <h3><?php echo $feature['title']; ?></h3>
+                            <p><?php echo $feature['description']; ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            
-            <div class="floating-element"></div>
-            
-            <div class="scroll-item">
-                <h3>Scale Animation</h3>
-                <p>Text này sẽ scale up khi xuất hiện</p>
+        </section>
+
+        <!-- Panel 4: Team -->
+        <section class="panel" id="panel4">
+            <div class="panel-content">
+                <h2 class="reveal-text">Our Team</h2>
+                <p class="animate-element">Our team of experts is dedicated to delivering the highest quality services to our clients.</p>
+                <div class="team-members animate-element">
+                    <!-- Team member cards would go here -->
+                    <div class="team-member">
+                        <img src="assets/images/team1.jpg" alt="Team Member">
+                        <h3>John Doe</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Panel 5: Testimonials -->
+        <section class="panel" id="panel5">
+            <div class="panel-content">
+                <h2 class="reveal-text">Client Testimonials</h2>
+                <div class="testimonial animate-element">
+                    <p>"CSA Vietnam has been an invaluable partner for our business. Their innovative solutions have helped us grow exponentially."</p>
+                    <h4>- Jane Smith, CEO of Tech Solutions</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel 6: Contact -->
+        <section class="panel" id="panel6">
+            <div class="panel-content">
+                <h2 class="reveal-text">Contact Us</h2>
+                <p class="animate-element">Reach out to us to learn more about how we can help your business succeed.</p>
+                <div class="contact-info animate-element">
+                    <p>Email: info@csavietnam.com</p>
+                    <p>Phone: +84 123 456 789</p>
+                    <p>Address: 123 Main Street, Ho Chi Minh City, Vietnam</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <div class="container">
