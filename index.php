@@ -20,67 +20,11 @@ $nav_items = [
     <meta name="keywords" content="CSA Vietnam, consulting, quality assurance, innovative solutions, Vietnam">
     <meta name="author" content="CSA Vietnam">
     <link rel="canonical" href="https://csavietnam.com/">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        /* Your existing CSS remains the same */
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 20px 0;
-            background-image: url('https://m.yodycdn.com/blog/hinh-nen-thien-nhien-4k-syody-vn-11-8472f148-baf1-4e8f-a35f-6960a7bc23a2.jpg');
-            background-size: cover; /* Optional: This makes the background image cover the entire element */
-            background-position: center; /* Optional: This centers the background image */
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .hero {
-            background-color: #f4f4f4;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            margin-bottom: 20px;
-        }
-        .features {
-            padding: 50px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .feature-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <header>
@@ -99,7 +43,7 @@ $nav_items = [
     <section class="hero">
         <div class="container">
             <h1>Welcome to <?php echo $site_title; ?></h1>
-            <p>Your trusted partner for innovative solutions in Vietnam, maybe</p>
+            <p>Your trusted partner for innovative solutions in Vietnam, maybe idk</p>
         </div>
     </section>
 
@@ -131,10 +75,37 @@ $nav_items = [
         </div>
     </section>
 
+    <!-- GSAP Scroll Demo Section -->
+    <section class="scroll-demo">
+        <div class="container">
+            <h2 class="reveal-text">GSAP Scroll Animation Demo</h2>
+            
+            <div class="scroll-item">
+                <h3>Fade In từ bên trái</h3>
+                <p>Element này sẽ slide vào từ bên trái khi scroll đến</p>
+            </div>
+            
+            <div class="scroll-item">
+                <h3>Fade In từ bên phải</h3>
+                <p>Element này sẽ slide vào từ bên phải</p>
+            </div>
+            
+            <div class="floating-element"></div>
+            
+            <div class="scroll-item">
+                <h3>Scale Animation</h3>
+                <p>Text này sẽ scale up khi xuất hiện</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <p>&copy; <?php echo date('Y'); ?> <?php echo $site_title; ?>. All rights reserved.</p>
         </div>
     </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/animations.js"></script>
 </body>
-</html>/data/website_csa
+</html>
