@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /info.php
+
+Sitemap: https://csavietnam.com/sitemap.xml
