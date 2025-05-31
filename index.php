@@ -108,7 +108,7 @@ $nav_items = [
                     <p class="newsletter-privacy">
                         By subscribing you agree to with our
                         <a href="#">Privacy Policy</a> and provide consent to
-                        receive updates from our company.
+                        receive updates from our company. hello world
                     </p>
                 </div>
             </div>
