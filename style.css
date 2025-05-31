@@ -11,10 +11,9 @@ body {
 
 /* Tạo header transparent */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: sticky; /* Change this from relative to sticky */
+    top: 0; /* This is crucial for sticky positioning */
+    width: 100%; /* Keep this to ensure it spans the full width */
     padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
