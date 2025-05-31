@@ -21,7 +21,7 @@ body {
     align-items: center;
     z-index: 100;
     background-color: transparent; /* Header trong suốt */
-    transition: 0.3s ease-in-out; /* Thêm transition cho mượt */
+    transition: all 0.3s ease; /* Thêm transition cho mượt */
 }
 
 /* Logo style */
@@ -96,6 +96,18 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+/* If you need hero background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+    z-index: -1;
 }
 
 /* Footer Styles */
