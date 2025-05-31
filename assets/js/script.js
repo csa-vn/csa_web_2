@@ -1,26 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const header = document.querySelector(".header");
-    
-    function updateHeaderStyle() {
-        // Use a fixed threshold instead of calculating based on hero height
-        if (window.scrollY > 100) { // Fixed 100px threshold
-            header.classList.add("scrolled");
-            console.log("Header scrolled at:", window.scrollY);
+    const header = document.querySelector("header");
+    const headerLinks = document.querySelectorAll(
+        "header a, header .dropdown-toggle"
+    );
+
+    window.addEventListener("scroll", function () {
+        // Change header color after scrolling past the hero section
+        // Assuming hero/first image section is approximately 500px tall
+        if (window.scrollY > 500) {
+            headerLinks.forEach((link) => {
+                link.style.color = "#000"; // Change to black when scrolled
+            });
         } else {
-            header.classList.remove("scrolled");
+            headerLinks.forEach((link) => {
+                link.style.color = ""; // Reset to default color
+            });
         }
-    }
-    
-    // Initial check
-    updateHeaderStyle();
-    
-    // Add scroll event listener without throttling for direct response
-    window.addEventListener("scroll", updateHeaderStyle);
-    
-    // Force update on page load and after a short delay
-    window.addEventListener("load", updateHeaderStyle);
-    setTimeout(updateHeaderStyle, 500); // Extra check after 500ms
-    
-    // Log initial state
-    console.log("Initial header class:", header.className);
+    });
 });
