@@ -285,3 +285,21 @@ section {
     padding-top: 80px; /* Account for fixed header */
     scroll-margin-top: 80px; /* Modern browsers - offset for smooth scrolling */
 }
+
+/* Styles cho animation */
+.char {
+  display: inline-block;
+  transform-origin: 50% 100%;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 0.25em;
+  white-space: nowrap;
+}
+
+/* Đảm bảo các phần tử split hiển thị đúng */
+.split {
+  overflow: hidden;
+  visibility: visible; /* Đảm bảo phần tử luôn hiển thị */
+}
