@@ -73,7 +73,7 @@ $nav_items = [
                     <h2>Comfort & Style</h2>
                 </div>
                 <div class="col-md-6">
-                    <p>
+                    <p class="split">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Dolor quam cupiditate vero vitae doloribus sequi
                         qui commodi dolore accusantium eveniet, maiores
@@ -155,6 +155,8 @@ $nav_items = [
         </footer>
 
         <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
         <script src="assets/js/script.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
