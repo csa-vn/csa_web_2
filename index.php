@@ -758,52 +758,56 @@ $nav_items = [
                     <div class="col-lg-6">
                         <div class="current-openings">
                             <h3>Current Openings</h3>
-                            
-                            <div class="job-card p-3">
-                                <div class="job-header ">
-                                    <h4>Senior UI/UX Designer</h4>
-                                    <span class="job-type full-time">Full-time</span>
-                                </div>
-                                <div class="job-details">
-                                    <p>We're looking for an experienced UI/UX Designer to create exceptional user experiences for our clients.</p>
-                                    <div class="job-meta">
-                                        <span><i class="fas fa-map-marker-alt"></i> Ho Chi Minh City</span>
-                                        <span><i class="fas fa-clock"></i> Full-time</span>
+                            <div class="job-card-wrapper">
+                                <div class="card job-card-custom h-100">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title mb-0">Senior UI/UX Designer</h5>
+                                            <span class="badge bg-primary rounded-pill job-type-badge">Full-time</span>
+                                        </div>
+                                        <p class="card-text text-muted mb-3 flex-grow-1">We're looking for an experienced UI/UX Designer to create exceptional user experiences for our clients.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="job-meta text-muted small">
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Ho Chi Minh City</span>
+                                                <span><i class="fas fa-clock me-1"></i> Full-time</span>
+                                            </div>
+                                            <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
-                            </div>
-                            
-                            <div class="job-card p-3">
-                                <div class="job-header">
-                                    <h4>Digital Marketing Specialist</h4>
-                                    <span class="job-type full-time">Full-time</span>
-                                </div>
-                                <div class="job-details">
-                                    <p>Join our marketing team to develop and implement effective digital marketing strategies for our clients.</p>
-                                    <div class="job-meta">
-                                        <span><i class="fas fa-map-marker-alt"></i> Ho Chi Minh City</span>
-                                        <span><i class="fas fa-clock"></i> Full-time</span>
+
+                                <div class="card job-card-custom h-100 mt-4"> <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title mb-0">Digital Marketing Specialist</h5>
+                                            <span class="badge bg-primary rounded-pill job-type-badge">Full-time</span>
+                                        </div>
+                                        <p class="card-text text-muted mb-3 flex-grow-1">Join our marketing team to develop and implement effective digital marketing strategies for our clients.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="job-meta text-muted small">
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Ho Chi Minh City</span>
+                                                <span><i class="fas fa-clock me-1"></i> Full-time</span>
+                                            </div>
+                                            <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
-                            </div>
-                            
-                            <div class="job-card p-3">
-                                <div class="job-header">
-                                    <h4>Front-end Developer</h4>
-                                    <span class="job-type part-time">Part-time</span>
-                                </div>
-                                <div class="job-details">
-                                    <p>We're seeking a talented Front-end Developer with expertise in HTML, CSS, and JavaScript frameworks.</p>
-                                    <div class="job-meta">
-                                        <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-                                        <span><i class="fas fa-clock"></i> Part-time</span>
+
+                                <div class="card job-card-custom h-100 mt-4"> <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title mb-0">Front-end Developer</h5>
+                                            <span class="badge bg-warning text-dark rounded-pill job-type-badge">Part-time</span> </div>
+                                        <p class="card-text text-muted mb-3 flex-grow-1">We're seeking a talented Front-end Developer with expertise in HTML, CSS, and JavaScript frameworks.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="job-meta text-muted small">
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Remote</span>
+                                                <span><i class="fas fa-clock me-1"></i> Part-time</span>
+                                            </div>
+                                            <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
                             </div>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </div>
