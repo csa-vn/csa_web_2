@@ -97,12 +97,12 @@ $nav_items = [
                             <h2 class="section-title split">We Turn Creative Ideas Into Remarkable Results</h2>
                         </div>
                         <div class="about-content">
-                            <p class="split">Founded in 2015, CSAVietnamCo. has grown from a small design studio to a full-service creative agency. We believe in the power of strategic thinking combined with exceptional execution to deliver results that exceed expectations.</p>
+                            <p class="split">Founded in 2018, CSAVietnamCo. has grown from a small design studio to a full-service creative agency. We believe in the power of strategic thinking combined with exceptional execution to deliver results that exceed expectations.</p>
                             <p class="split">Our team of specialists work closely with clients to understand their unique challenges and create tailored solutions that drive real business growth.</p>
                             
                             <div class="company-stats">
                                 <div class="stat-item">
-                                    <span class="stat-number">150+</span>
+                                    <span class="stat-number">100+</span>
                                     <span class="stat-text">Projects Completed</span>
                                 </div>
                                 <div class="stat-item">
@@ -110,7 +110,7 @@ $nav_items = [
                                     <span class="stat-text">Happy Clients</span>
                                 </div>
                                 <div class="stat-item">
-                                    <span class="stat-number">8+</span>
+                                    <span class="stat-number">7+</span>
                                     <span class="stat-text">Years Experience</span>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@ $nav_items = [
                     </div>
                     <div class="col-lg-6">
                         <div class="about-image">
-                            <img src="/assets/images/about-image.jpg" alt="Our team at work" class="img-fluid">
+                            <img src="assets/images/pexels-fauxels-3183183.jpg" alt="Our team at work" class="img-fluid">
                         </div>
                     </div>
                 </div>
