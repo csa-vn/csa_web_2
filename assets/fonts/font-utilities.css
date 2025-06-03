@@ -1,0 +1,137 @@
+/* ====== FONT UTILITY CLASSES ====== */
+
+/* Font Family Classes */
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-opensans { font-family: 'Open Sans', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-lato { font-family: 'Lato', sans-serif; }
+.font-sourcesans { font-family: 'Source Sans Pro', sans-serif; }
+
+/* Font Weight Classes */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Font Size Classes */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+
+/* Common Typography Combinations */
+.heading-primary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.heading-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.heading-tertiary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.body-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.body-text-large {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.caption-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.button-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.025em;
+}
+
+.nav-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.elegant-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 1.3;
+}
+
+.tech-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .heading-primary {
+        font-size: 2rem;
+    }
+    
+    .heading-secondary {
+        font-size: 1.75rem;
+    }
+    
+    .heading-tertiary {
+        font-size: 1.25rem;
+    }
+    
+    .elegant-heading {
+        font-size: 1.875rem;
+    }
+    
+    .tech-heading {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading-primary {
+        font-size: 1.75rem;
+    }
+    
+    .heading-secondary {
+        font-size: 1.5rem;
+    }
+    
+    .body-text-large {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,315 @@
+/* ====== FONT DEFINITIONS ====== */
+
+/* Roboto - Modern Sans Serif Font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Light.woff2') format('woff2'),
+         url('roboto/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Regular.woff2') format('woff2'),
+         url('roboto/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Medium.woff2') format('woff2'),
+         url('roboto/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto/Roboto-Bold.woff2') format('woff2'),
+         url('roboto/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Poppins - Modern Display Font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-Light.woff2') format('woff2'),
+         url('poppins/Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-Regular.woff2') format('woff2'),
+         url('poppins/Poppins-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-Medium.woff2') format('woff2'),
+         url('poppins/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-SemiBold.woff2') format('woff2'),
+         url('poppins/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-Bold.woff2') format('woff2'),
+         url('poppins/Poppins-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Open Sans - Clean Reading Font */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('opensans/OpenSans-Light.woff2') format('woff2'),
+         url('opensans/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('opensans/OpenSans-Regular.woff2') format('woff2'),
+         url('opensans/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('opensans/OpenSans-SemiBold.woff2') format('woff2'),
+         url('opensans/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('opensans/OpenSans-Bold.woff2') format('woff2'),
+         url('opensans/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Montserrat - Elegant Display Font */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-Light.woff2') format('woff2'),
+         url('montserrat/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-Regular.woff2') format('woff2'),
+         url('montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-Medium.woff2') format('woff2'),
+         url('montserrat/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+         url('montserrat/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('montserrat/Montserrat-Bold.woff2') format('woff2'),
+         url('montserrat/Montserrat-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Playfair Display - Elegant Serif Font */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfair/PlayfairDisplay-Regular.woff2') format('woff2'),
+         url('playfair/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfair/PlayfairDisplay-Medium.woff2') format('woff2'),
+         url('playfair/PlayfairDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfair/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+         url('playfair/PlayfairDisplay-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('playfair/PlayfairDisplay-Bold.woff2') format('woff2'),
+         url('playfair/PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Inter - Modern UI Font */
+@font-face {
+    font-family: 'Inter';
+    src: url('inter/Inter-Light.woff2') format('woff2'),
+         url('inter/Inter-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('inter/Inter-Regular.woff2') format('woff2'),
+         url('inter/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('inter/Inter-Medium.woff2') format('woff2'),
+         url('inter/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('inter/Inter-SemiBold.woff2') format('woff2'),
+         url('inter/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('inter/Inter-Bold.woff2') format('woff2'),
+         url('inter/Inter-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Lato - Humanist Font */
+@font-face {
+    font-family: 'Lato';
+    src: url('lato/Lato-Light.woff2') format('woff2'),
+         url('lato/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('lato/Lato-Regular.woff2') format('woff2'),
+         url('lato/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('lato/Lato-Bold.woff2') format('woff2'),
+         url('lato/Lato-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Source Sans Pro - Adobe's UI Font */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('sourcesans/SourceSansPro-Light.woff2') format('woff2'),
+         url('sourcesans/SourceSansPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('sourcesans/SourceSansPro-Regular.woff2') format('woff2'),
+         url('sourcesans/SourceSansPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('sourcesans/SourceSansPro-SemiBold.woff2') format('woff2'),
+         url('sourcesans/SourceSansPro-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('sourcesans/SourceSansPro-Bold.woff2') format('woff2'),
+         url('sourcesans/SourceSansPro-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

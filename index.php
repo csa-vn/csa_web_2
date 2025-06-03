@@ -699,64 +699,63 @@ $nav_items = [
         <!-- HR / Careers section -->
         <section id="hr" class="section-padding pb-5">
             <div class="container">
-                <div class="section-header text-center">
+                <!-- <div class="section-header text-center">
                     <span class="section-subtitle">Join Our Team</span>
                     <h2 class="section-title split">Careers at CSAVietnamCo.</h2>
                     <p class="section-desc">We're always looking for talented individuals to join our growing team</p>
-                </div>
+                </div> -->
                 
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="careers-content">
-                            <h3>Why Work With Us?</h3>
-                            <p class="split">Join a team of passionate creatives and digital experts in an environment that fosters innovation, professional growth, and work-life balance.</p>
+                    <div class="careers-content">
+                            <div class="careers-header">
+                                <h3 class="careers-title">Why Work With Us?</h3>
+                                <p class="careers-description split">Join a team of passionate creatives and digital experts in an environment that fosters innovation, professional growth, and work-life balance.</p>
+                            </div>
                             
-                            <div class="benefits-list">
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
+                            <div class="benefits-grid">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon-wrapper">
                                         <i class="fas fa-chart-line"></i>
                                     </div>
-                                    <div class="benefit-text">
-                                        <h4>Career Growth</h4>
-                                        <p>Continuous learning opportunities and clear career advancement paths.</p>
+                                    <div class="benefit-content">
+                                        <h4 class="benefit-title">Career Growth</h4>
+                                        <p class="benefit-description">Continuous learning opportunities and clear career advancement paths.</p>
                                     </div>
                                 </div>
                                 
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon-wrapper">
                                         <i class="fas fa-users"></i>
                                     </div>
-                                    <div class="benefit-text">
-                                        <h4>Collaborative Culture</h4>
-                                        <p>Work with diverse, talented professionals in a supportive environment.</p>
+                                    <div class="benefit-content">
+                                        <h4 class="benefit-title">Collaborative Culture</h4>
+                                        <p class="benefit-description">Work with diverse, talented professionals in a supportive environment.</p>
                                     </div>
                                 </div>
                                 
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon-wrapper">
                                         <i class="fas fa-medal"></i>
                                     </div>
-                                    <div class="benefit-text">
-                                        <h4>Competitive Benefits</h4>
-                                        <p>Competitive salary, health insurance, and performance bonuses.</p>
+                                    <div class="benefit-content">
+                                        <h4 class="benefit-title">Competitive Benefits</h4>
+                                        <p class="benefit-description">Competitive salary, health insurance, and performance bonuses.</p>
                                     </div>
                                 </div>
                                 
-                                <div class="benefit-item">
-                                    <div class="benefit-icon">
-                                        <i class="fas fa-briefcase"></i>
+                                <div class="benefit-card">
+                                    <div class="benefit-icon-wrapper">
+                                        <i class="fas fa-balance-scale"></i>
                                     </div>
-                                    <div class="benefit-text">
-                                        <h4>Work-Life Balance</h4>
-                                        <p>Flexible working hours and remote work options available.</p>
+                                    <div class="benefit-content">
+                                        <h4 class="benefit-title">Work-Life Balance</h4>
+                                        <p class="benefit-description">Flexible working hours and remote work options available.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     
-                    <div class="col-lg-6">
-                        <div class="current-openings">
+                    <div class="current-openings pt-5">
                             <h3>Current Openings</h3>
                             <div class="job-card-wrapper">
                                 <div class="card job-card-custom h-100">
@@ -768,8 +767,8 @@ $nav_items = [
                                         <p class="card-text text-muted mb-3 flex-grow-1">We're looking for an experienced UI/UX Designer to create exceptional user experiences for our clients.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="job-meta text-muted small">
-                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Ho Chi Minh City</span>
-                                                <span><i class="fas fa-clock me-1"></i> Full-time</span>
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1 text-danger"></i> Ho Chi Minh City</span>
+                                                <span><i class="fas fa-clock me-1 text-primary"></i> Full-time</span>
                                             </div>
                                             <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
                                         </div>
@@ -784,8 +783,8 @@ $nav_items = [
                                         <p class="card-text text-muted mb-3 flex-grow-1">Join our marketing team to develop and implement effective digital marketing strategies for our clients.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="job-meta text-muted small">
-                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Ho Chi Minh City</span>
-                                                <span><i class="fas fa-clock me-1"></i> Full-time</span>
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1 text-danger"></i> Ho Chi Minh City</span>
+                                                <span><i class="fas fa-clock me-1 text-primary"></i> Full-time</span>
                                             </div>
                                             <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
                                         </div>
@@ -799,16 +798,15 @@ $nav_items = [
                                         <p class="card-text text-muted mb-3 flex-grow-1">We're seeking a talented Front-end Developer with expertise in HTML, CSS, and JavaScript frameworks.</p>
                                         <div class="d-flex justify-content-between align-items-center mt-auto">
                                             <div class="job-meta text-muted small">
-                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1"></i> Remote</span>
-                                                <span><i class="fas fa-clock me-1"></i> Part-time</span>
+                                                <span class="me-3"><i class="fas fa-map-marker-alt me-1 text-danger"></i> Ho Chi Minh City</span>
+                                                <span><i class="fas fa-clock me-1 text-primary"></i> Part-time</span>
                                             </div>
                                             <a href="#" class="btn btn-outline-primary btn-sm">Apply Now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>    
-                    </div>
+                        </div>   
                 </div>
             </div>
         </section>

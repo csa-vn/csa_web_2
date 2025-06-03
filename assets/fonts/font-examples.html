@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Demo - CSA Vietnam Co.</title>
+    <link rel="stylesheet" href="fonts.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .font-demo {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #007bff;
+        }
+        
+        .font-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+        
+        .font-weights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .weight-example {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .weight-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .sample-text {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .sample-heading {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .alphabet {
+            font-size: 0.9rem;
+            color: #666;
+            letter-spacing: 1px;
+        }
+        
+        .usage-tip {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .usage-tip h4 {
+            color: #1976d2;
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .usage-tip p {
+            color: #424242;
+            font-size: 0.9rem;
+        }
+        
+        .combinations {
+            background: #fff3e0;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            border-left: 5px solid #ff9800;
+        }
+        
+        .combination-demo {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 style="font-family: 'Poppins', sans-serif; font-weight: 700; color: #2c3e50; font-size: 3rem;">Font Showcase</h1>
+            <p style="font-family: 'Inter', sans-serif; font-size: 1.2rem; color: #6c757d;">Bộ sưu tập font chữ dành cho CSA Vietnam Co.</p>
+        </div>
+
+        <!-- Roboto -->
+        <div class="font-demo">
+            <div class="font-name">🤖 Roboto - Modern Sans Serif</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Light (300)</div>
+                    <div class="sample-heading" style="font-family: 'Roboto', sans-serif; font-weight: 300;">Thiết kế Website Chuyên nghiệp</div>
+                    <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-weight: 300;">Chúng tôi tạo ra những trải nghiệm số đỉnh cao</div>
+                    <div class="alphabet" style="font-family: 'Roboto', sans-serif; font-weight: 300;">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Regular (400)</div>
+                    <div class="sample-heading" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Thiết kế Website Chuyên nghiệp</div>
+                    <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Chúng tôi tạo ra những trải nghiệm số đỉnh cao</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Medium (500)</div>
+                    <div class="sample-heading" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Thiết kế Website Chuyên nghiệp</div>
+                    <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Chúng tôi tạo ra những trải nghiệm số đỉnh cao</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Bold (700)</div>
+                    <div class="sample-heading" style="font-family: 'Roboto', sans-serif; font-weight: 700;">Thiết kế Website Chuyên nghiệp</div>
+                    <div class="sample-text" style="font-family: 'Roboto', sans-serif; font-weight: 700;">Chúng tôi tạo ra những trải nghiệm số đỉnh cao</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>Buttons, UI elements, navigation menu, form labels. Font rất rõ ràng và dễ đọc trên mọi kích thước màn hình.</p>
+            </div>
+        </div>
+
+        <!-- Poppins -->
+        <div class="font-demo">
+            <div class="font-name">✨ Poppins - Trendy Display Font</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Light (300)</div>
+                    <div class="sample-heading" style="font-family: 'Poppins', sans-serif; font-weight: 300;">Creative Digital Solutions</div>
+                    <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-weight: 300;">Transform your business with innovative design</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Regular (400)</div>
+                    <div class="sample-heading" style="font-family: 'Poppins', sans-serif; font-weight: 400;">Creative Digital Solutions</div>
+                    <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-weight: 400;">Transform your business with innovative design</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">SemiBold (600)</div>
+                    <div class="sample-heading" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Creative Digital Solutions</div>
+                    <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-weight: 600;">Transform your business with innovative design</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Bold (700)</div>
+                    <div class="sample-heading" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Creative Digital Solutions</div>
+                    <div class="sample-text" style="font-family: 'Poppins', sans-serif; font-weight: 700;">Transform your business with innovative design</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>Tiêu đề chính (H1, H2), logo text, call-to-action buttons. Font rất trendy và thu hút sự chú ý.</p>
+            </div>
+        </div>
+
+        <!-- Open Sans -->
+        <div class="font-demo">
+            <div class="font-name">📖 Open Sans - Clean Reading Font</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Light (300)</div>
+                    <div class="sample-text" style="font-family: 'Open Sans', sans-serif; font-weight: 300;">Đây là đoạn văn bản mẫu để kiểm tra độ rõ ràng và dễ đọc của font chữ. Open Sans được thiết kế đặc biệt để tối ưu hóa trải nghiệm đọc trên các thiết bị điện tử.</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Regular (400)</div>
+                    <div class="sample-text" style="font-family: 'Open Sans', sans-serif; font-weight: 400;">Đây là đoạn văn bản mẫu để kiểm tra độ rõ ràng và dễ đọc của font chữ. Open Sans được thiết kế đặc biệt để tối ưu hóa trải nghiệm đọc trên các thiết bị điện tử.</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">SemiBold (600)</div>
+                    <div class="sample-text" style="font-family: 'Open Sans', sans-serif; font-weight: 600;">Đây là đoạn văn bản mẫu để kiểm tra độ rõ ràng và dễ đọc của font chữ. Open Sans được thiết kế đặc biệt để tối ưu hóa trải nghiệm đọc.</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>Body text, đoạn văn dài, blog content, description text. Rất dễ đọc và không gây mỏi mắt.</p>
+            </div>
+        </div>
+
+        <!-- Montserrat -->
+        <div class="font-demo">
+            <div class="font-name">🏛️ Montserrat - Elegant Display Font</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Light (300)</div>
+                    <div class="sample-heading" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">LUXURY BRAND IDENTITY</div>
+                    <div class="sample-text" style="font-family: 'Montserrat', sans-serif; font-weight: 300;">Elegance in every detail</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Medium (500)</div>
+                    <div class="sample-heading" style="font-family: 'Montserrat', sans-serif; font-weight: 500;">LUXURY BRAND IDENTITY</div>
+                    <div class="sample-text" style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Elegance in every detail</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Bold (700)</div>
+                    <div class="sample-heading" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">LUXURY BRAND IDENTITY</div>
+                    <div class="sample-text" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Elegance in every detail</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>Brand names, luxury product titles, section headings, premium service descriptions.</p>
+            </div>
+        </div>
+
+        <!-- Playfair Display -->
+        <div class="font-demo">
+            <div class="font-name">🎭 Playfair Display - Elegant Serif</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Regular (400)</div>
+                    <div class="sample-heading" style="font-family: 'Playfair Display', serif; font-weight: 400;">The Art of Digital Storytelling</div>
+                    <div class="sample-text" style="font-family: 'Playfair Display', serif; font-weight: 400;">Where tradition meets innovation</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">SemiBold (600)</div>
+                    <div class="sample-heading" style="font-family: 'Playfair Display', serif; font-weight: 600;">The Art of Digital Storytelling</div>
+                    <div class="sample-text" style="font-family: 'Playfair Display', serif; font-weight: 600;">Where tradition meets innovation</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Bold (700)</div>
+                    <div class="sample-heading" style="font-family: 'Playfair Display', serif; font-weight: 700;">The Art of Digital Storytelling</div>
+                    <div class="sample-text" style="font-family: 'Playfair Display', serif; font-weight: 700;">Where tradition meets innovation</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>Elegant headings, testimonials, quotes, editorial content, sophisticated brand messaging.</p>
+            </div>
+        </div>
+
+        <!-- Inter -->
+        <div class="font-demo">
+            <div class="font-name">🔧 Inter - Modern UI Font</div>
+            <div class="font-weights">
+                <div class="weight-example">
+                    <div class="weight-label">Light (300)</div>
+                    <div class="sample-text" style="font-family: 'Inter', sans-serif; font-weight: 300;">Interface được thiết kế với sự chú ý đến từng chi tiết nhỏ nhất. Mọi thành phần đều được tối ưu hóa để mang lại trải nghiệm người dùng tốt nhất.</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">Regular (400)</div>
+                    <div class="sample-text" style="font-family: 'Inter', sans-serif; font-weight: 400;">Interface được thiết kế với sự chú ý đến từng chi tiết nhỏ nhất. Mọi thành phần đều được tối ưu hóa để mang lại trải nghiệm người dùng tốt nhất.</div>
+                </div>
+                <div class="weight-example">
+                    <div class="weight-label">SemiBold (600)</div>
+                    <div class="sample-text" style="font-family: 'Inter', sans-serif; font-weight: 600;">Interface được thiết kế với sự chú ý đến từng chi tiết nhỏ nhất. Mọi thành phần đều được tối ưu hóa.</div>
+                </div>
+            </div>
+            <div class="usage-tip">
+                <h4>Sử dụng tốt nhất cho:</h4>
+                <p>UI text, dashboard, admin panels, application interfaces, technical documentation.</p>
+            </div>
+        </div>
+
+        <!-- Font Combinations -->
+        <div class="combinations">
+            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #e65100; margin-bottom: 1rem;">🎨 Font Combinations Đề xuất</h2>
+            
+            <div class="combination-demo">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #2c3e50;">Modern & Professional</h3>
+                <h1 style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 2.5rem; color: #333; margin: 1rem 0;">Your Main Heading</h1>
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 500; color: #666; margin-bottom: 1rem;">Subheading with Montserrat</h3>
+                <p style="font-family: 'Inter', sans-serif; font-weight: 400; color: #444; line-height: 1.7;">This is body text using Inter font. It's highly readable and perfect for long-form content. The spacing and letter forms are optimized for screen reading.</p>
+            </div>
+
+            <div class="combination-demo">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #2c3e50;">Elegant & Sophisticated</h3>
+                <h1 style="font-family: 'Playfair Display', serif; font-weight: 600; font-size: 2.5rem; color: #333; margin: 1rem 0;">Elegant Serif Heading</h1>
+                <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 400; color: #666; margin-bottom: 1rem;">Clean Sans Serif Subheading</h3>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight: 400; color: #444; line-height: 1.7;">Body text with Open Sans provides excellent readability while maintaining the elegant feel established by the Playfair Display heading.</p>
+            </div>
+
+            <div class="combination-demo">
+                <h3 style="font-family: 'Poppins', sans-serif; font-weight: 600; color: #2c3e50;">Tech & Minimal</h3>
+                <h1 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 2.5rem; color: #333; margin: 1rem 0;">All Inter Everything</h1>
+                <h3 style="font-family: 'Inter', sans-serif; font-weight: 500; color: #666; margin-bottom: 1rem;">Consistent Typography</h3>
+                <p style="font-family: 'Inter', sans-serif; font-weight: 400; color: #444; line-height: 1.7;">Using a single font family with different weights creates a clean, cohesive look perfect for tech and startup websites.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -412,3 +412,195 @@ textarea.form-control {
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-top: var(--bs-gutter-y);
 }
+
+/* ====== CAREERS SECTION STYLES ====== */
+.careers-content {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.careers-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.careers-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.careers-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.careers-description {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.7;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f3f5;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon-wrapper {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon-wrapper {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.benefit-icon-wrapper i {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.benefit-content {
+    flex: 1;
+}
+
+.benefit-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for Benefits */
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .careers-content {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .careers-title {
+        font-size: 1.8rem;
+    }
+    
+    .careers-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    
+    .benefit-card {
+        padding: 1.2rem;
+    }
+    
+    .benefit-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+    }
+    
+    .benefit-icon-wrapper i {
+        font-size: 1.2rem;
+    }
+    
+    .benefit-title {
+        font-size: 1.1rem;
+    }
+    
+    .benefit-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for split text */
+.careers-description.split {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional hover effects */
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0;
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.benefit-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover::before {
+    opacity: 0.03;
+}
