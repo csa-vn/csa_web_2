@@ -70,8 +70,8 @@ $nav_items = [
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="hero-title split">Elevate Your Brand with Creative Solutions</h1>
-                        <p class="hero-subtitle split">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
+                        <h1 class="hero-title split text-light">Elevate Your Brand with Creative Solutions</h1>
+                        <p class="hero-subtitle split text-light">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
                         <div class="hero-cta">
                             <a href="#contact" class="btn btn-primary">Start Your Project</a>
                             <a href="#portfolio" class="btn btn-outline">View Our Work</a>
@@ -80,7 +80,7 @@ $nav_items = [
                     <div class="col-lg-6">
                         <div class="hero-image">
                             <!-- Placeholder for hero image -->
-                            <img src="/assets/images/hero-image.jpg" alt="Creative agency workspace" class="img-fluid">
+                            <img src="assets/images/pexels-pixabay-459203.jpg" alt="Creative agency workspace" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ $nav_items = [
         </section>
 
         <!-- About section -->
-        <section id="about" class="section-padding">
+        <section id="about" class="section-padding pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -122,88 +122,11 @@ $nav_items = [
                         </div>
                     </div>
                 </div>
-                
-                <!-- Team section -->
-                <div class="team-section">
-                    <div class="section-header text-center">
-                        <h3>Meet Our Team</h3>
-                        <p>The creative minds behind our success</p>
-                    </div>
-                    <div class="row">
-                        <!-- Team member 1 -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-member">
-                                <div class="member-image">
-                                    <img src="/assets/images/team-1.jpg" alt="Team Member" class="img-fluid">
-                                </div>
-                                <div class="member-info">
-                                    <h4>Jane Doe</h4>
-                                    <p>Creative Director</p>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Team member 2 -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-member">
-                                <div class="member-image">
-                                    <img src="/assets/images/team-2.jpg" alt="Team Member" class="img-fluid">
-                                </div>
-                                <div class="member-info">
-                                    <h4>John Smith</h4>
-                                    <p>Design Lead</p>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Team member 3 -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-member">
-                                <div class="member-image">
-                                    <img src="/assets/images/team-3.jpg" alt="Team Member" class="img-fluid">
-                                </div>
-                                <div class="member-info">
-                                    <h4>Emily Chen</h4>
-                                    <p>Marketing Strategist</p>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Team member 4 -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="team-member">
-                                <div class="member-image">
-                                    <img src="/assets/images/team-4.jpg" alt="Team Member" class="img-fluid">
-                                </div>
-                                <div class="member-info">
-                                    <h4>David Kim</h4>
-                                    <p>Development Lead</p>
-                                    <div class="social-links">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         
         <!-- Services section -->
-        <section id="services" class="section-padding bg-light">
+        <section id="services" class="section-padding bg-light pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">What We Do</span>
@@ -213,7 +136,7 @@ $nav_items = [
                 
                 <div class="row">
                     <!-- Service 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-paint-brush"></i>
@@ -232,7 +155,7 @@ $nav_items = [
                     </div>
                     
                     <!-- Service 2 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-code"></i>
@@ -251,7 +174,7 @@ $nav_items = [
                     </div>
                     
                     <!-- Service 3 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-chart-line"></i>
@@ -270,7 +193,7 @@ $nav_items = [
                     </div>
                     
                     <!-- Service 4 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-camera"></i>
@@ -289,7 +212,7 @@ $nav_items = [
                     </div>
                     
                     <!-- Service 5 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-mobile-alt"></i>
@@ -308,7 +231,7 @@ $nav_items = [
                     </div>
                     
                     <!-- Service 6 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-4 col-md-6 p-3">
                         <div class="service-card">
                             <div class="service-icon">
                                 <i class="fas fa-bullhorn"></i>
@@ -330,7 +253,7 @@ $nav_items = [
         </section>
         
         <!-- Portfolio section -->
-        <section id="portfolio" class="section-padding">
+        <section id="portfolio" class="section-padding pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Our Work</span>
@@ -459,7 +382,7 @@ $nav_items = [
         </section>
         
         <!-- Clients & Testimonials section -->
-        <section id="clients" class="section-padding bg-light">
+        <section id="clients" class="section-padding bg-light pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Our Clients</span>
@@ -589,7 +512,7 @@ $nav_items = [
         </section>
         
         <!-- Blog section -->
-        <section id="blog" class="section-padding">
+        <section id="blog" class="section-padding pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Our Blog</span>
@@ -672,7 +595,7 @@ $nav_items = [
         </section>
         
         <!-- Contact section -->
-        <section id="contact" class="section-padding bg-light">
+        <section id="contact" class="section-padding bg-light pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Get In Touch</span>
@@ -774,7 +697,7 @@ $nav_items = [
         </section>
         
         <!-- HR / Careers section -->
-        <section id="hr" class="section-padding">
+        <section id="hr" class="section-padding pb-5">
             <div class="container">
                 <div class="section-header text-center">
                     <span class="section-subtitle">Join Our Team</span>
@@ -836,8 +759,8 @@ $nav_items = [
                         <div class="current-openings">
                             <h3>Current Openings</h3>
                             
-                            <div class="job-card">
-                                <div class="job-header">
+                            <div class="job-card p-3">
+                                <div class="job-header ">
                                     <h4>Senior UI/UX Designer</h4>
                                     <span class="job-type full-time">Full-time</span>
                                 </div>
@@ -848,10 +771,10 @@ $nav_items = [
                                         <span><i class="fas fa-clock"></i> Full-time</span>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
                             </div>
                             
-                            <div class="job-card">
+                            <div class="job-card p-3">
                                 <div class="job-header">
                                     <h4>Digital Marketing Specialist</h4>
                                     <span class="job-type full-time">Full-time</span>
@@ -863,10 +786,10 @@ $nav_items = [
                                         <span><i class="fas fa-clock"></i> Full-time</span>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
                             </div>
                             
-                            <div class="job-card">
+                            <div class="job-card p-3">
                                 <div class="job-header">
                                     <h4>Front-end Developer</h4>
                                     <span class="job-type part-time">Part-time</span>
@@ -878,7 +801,7 @@ $nav_items = [
                                         <span><i class="fas fa-clock"></i> Part-time</span>
                                     </div>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary">Apply Now</a>
+                                <a href="#" class="btn btn-outline-primary mt-3">Apply Now</a>
                             </div>
                         </div>
                     </div>
