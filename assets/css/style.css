@@ -145,6 +145,7 @@ body {
 .footer-logo h2 {
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 800 !important;
+    color: #000;
     letter-spacing: -0.02em;
     font-size: 2.5rem;
     margin: 0;
@@ -869,6 +870,7 @@ body {
     font-family: 'Montserrat', sans-serif !important;
     font-weight: 800 !important;
     letter-spacing: -0.02em;
+    color: #000 !important; /* Màu đen cho logo footer */
 }
 
 .footer-copyright {
@@ -991,10 +993,8 @@ body {
 
 /* Footer Typography Enhancement */
 .footer-logo h2 {
-    background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #000 !important; /* Logo footer luôn màu đen */
+    /* Bỏ gradient effect để giữ màu đen */
 }
 
 /* Navigation Enhancement */
