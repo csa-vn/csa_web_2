@@ -37,7 +37,12 @@ $nav_items = [
             rel="stylesheet"
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
+        
+        <!-- Custom Fonts -->
+        <link rel="stylesheet" href="assets/fonts/fonts.css" />
+        <link rel="stylesheet" href="assets/fonts/font-utilities.css" />
+        
+        <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
         <!-- Header transparent -->
@@ -237,14 +242,14 @@ $nav_items = [
                                 <i class="fas fa-bullhorn"></i>
                             </div>
                             <div class="service-content">
-                                <h3>Strategy & Consulting</h3>
-                                <p>Expert guidance to help you make informed decisions and develop effective digital strategies.</p>
-                                <ul class="service-features">
+                                <h3 class="font-montserrat font-semibold">Strategy & Consulting</h3>
+                                <p class="font-opensans font-normal">Expert guidance to help you make informed decisions and develop effective digital strategies.</p>
+                                <ul class="service-features font-inter font-normal">
                                     <li>Market Research</li>
                                     <li>Competitive Analysis</li>
                                     <li>Growth Strategy</li>
                                 </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                                <a href="#" class="service-link font-roboto font-medium">Learn More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -256,18 +261,18 @@ $nav_items = [
         <section id="portfolio" class="section-padding pb-5">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">Our Work</span>
-                    <h2 class="section-title split">Featured Projects</h2>
-                    <p class="section-desc">Browse our recent work to see how we've helped businesses achieve their goals</p>
+                    <span class="section-subtitle font-inter font-medium">Our Work</span>
+                    <h2 class="section-title split font-poppins font-semibold">Featured Projects</h2>
+                    <p class="section-desc font-opensans font-normal">Browse our recent work to see how we've helped businesses achieve their goals</p>
                 </div>
                 
                 <div class="portfolio-filter">
                     <ul>
-                        <li data-filter="*" class="active">All</li>
-                        <li data-filter=".branding">Branding</li>
-                        <li data-filter=".web">Web Design</li>
-                        <li data-filter=".marketing">Marketing</li>
-                        <li data-filter=".ux">UX/UI</li>
+                        <li data-filter="*" class="active font-sourcesans font-medium">All</li>
+                        <li data-filter=".branding" class="font-sourcesans font-medium">Branding</li>
+                        <li data-filter=".web" class="font-sourcesans font-medium">Web Design</li>
+                        <li data-filter=".marketing" class="font-sourcesans font-medium">Marketing</li>
+                        <li data-filter=".ux" class="font-sourcesans font-medium">UX/UI</li>
                     </ul>
                 </div>
                 

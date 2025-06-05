@@ -5,8 +5,10 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     color: #333;
+    line-height: 1.6;
 }
 
 /* Tạo header transparent */
@@ -26,8 +28,10 @@ body {
 
 /* Logo style */
 .logo a {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
     font-size: 1.8rem;
-    font-weight: 500;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease; /* Thêm transition cho màu chữ */
@@ -41,6 +45,9 @@ body {
 }
 
 .navigation a {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em;
     color: #fff;
     text-decoration: none;
     font-weight: 400;
@@ -136,13 +143,16 @@ body {
 }
 
 .footer-logo h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
     font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.2;
     margin: 0;
 }
 
 .footer-copyright {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
     font-size: 0.9rem;
     color: #666;
     margin-top: 2rem;
@@ -155,6 +165,8 @@ body {
 }
 
 .footer-links a {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 400 !important;
     display: block;
     color: #333;
     text-decoration: none;
@@ -191,11 +203,15 @@ body {
 }
 
 .newsletter h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .newsletter p {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
     margin-bottom: 1.5rem;
     color: #333;
 }
@@ -211,6 +227,8 @@ body {
     border: 1px solid #ddd;
     border-radius: 4px 0 0 4px;
     outline: none;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
 }
 
 .newsletter-form button {
@@ -220,10 +238,14 @@ body {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
 }
 
 .newsletter-privacy {
-    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 0.9rem;
     color: #666;
 }
 
@@ -357,6 +379,8 @@ section {
   border-radius: 8px;
   transition: all 0.3s ease;
   background-color: #fff;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
 }
 
 .form-control:focus {
@@ -428,8 +452,10 @@ textarea.form-control {
 }
 
 .careers-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
     font-size: 2.2rem;
-    font-weight: 700;
     color: #2c3e50;
     margin-bottom: 1rem;
     position: relative;
@@ -448,9 +474,11 @@ textarea.form-control {
 }
 
 .careers-description {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.7;
     font-size: 1.1rem;
     color: #6c757d;
-    line-height: 1.7;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -505,13 +533,16 @@ textarea.form-control {
 }
 
 .benefit-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
     font-size: 1.3rem;
-    font-weight: 600;
     color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
 .benefit-description {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
     color: #6c757d;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -603,4 +634,444 @@ textarea.form-control {
 
 .benefit-card:hover::before {
     opacity: 0.03;
+}
+
+/* ====== TYPOGRAPHY SYSTEM FOR CSA VIETNAM CO. ====== */
+
+/* Primary Brand Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Logo and Brand */
+.logo a {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Navigation */
+.navigation a {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em;
+}
+
+/* Section Headers */
+.section-subtitle {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+}
+
+.section-desc {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Service Cards */
+.service-card h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    color: #2c3e50;
+}
+
+.service-card p {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
+}
+
+.service-features {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.service-link {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em;
+}
+
+/* Portfolio */
+.portfolio-filter li {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+.portfolio-content h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.portfolio-content p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    color: #6c757d;
+}
+
+/* Blog Section */
+.blog-title a {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    line-height: 1.3;
+}
+
+.blog-excerpt {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
+}
+
+.blog-meta {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+}
+
+.blog-readmore {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+/* Testimonials */
+.testimonial-content p {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-author h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.testimonial-author p {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    color: #6c757d;
+}
+
+/* Contact Section */
+.contact-text h4 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.contact-text p {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Form Elements */
+.form-control {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.form-control::placeholder {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    color: #adb5bd;
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    font-weight: 600 !important;
+}
+
+/* About Section */
+.company-stats .stat-number {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+}
+
+.company-stats .stat-text {
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Careers Section */
+.careers-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+.careers-description {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.benefit-title {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.benefit-description {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Job Cards */
+.job-card-custom .card-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.job-card-custom .card-text {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.job-meta {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* Footer */
+.footer-logo h2 {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+}
+
+.footer-copyright {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.footer-links a {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.newsletter h2 {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.newsletter p {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.newsletter-form input {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+.newsletter-form button {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+}
+
+.newsletter-privacy {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 0.9rem;
+}
+
+/* ====== ENHANCED TYPOGRAPHY FOR BRAND CONSISTENCY ====== */
+
+/* Visual Hierarchy Enhancement */
+.hero-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.section-title {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Service Cards Enhancement */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: #3498db;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+/* Portfolio Typography */
+.portfolio-filter li.active {
+    font-weight: 600 !important;
+    color: #3498db !important;
+}
+
+/* Testimonial Styling */
+.testimonial-content p {
+    position: relative;
+}
+
+.testimonial-content p::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: #e9ecef;
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    z-index: -1;
+}
+
+/* Blog Cards Typography */
+.blog-title a {
+    transition: color 0.3s ease;
+}
+
+.blog-title a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Contact Form Typography */
+.form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Job Cards Enhancement */
+.job-card-custom {
+    transition: all 0.3s ease;
+}
+
+.job-card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.job-type-badge {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 0.75rem !important;
+}
+
+/* Footer Typography Enhancement */
+.footer-logo h2 {
+    background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Navigation Enhancement */
+.navigation a:hover {
+    color: #3498db !important;
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+/* Brand Identity Consistency */
+.section-subtitle {
+    position: relative;
+    display: inline-block;
+}
+
+.section-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #3498db 0%, #2c3e50 100%);
+}
+
+/* Interactive Elements */
+.btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Responsive Typography Enhancements */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3rem !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2.2rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+        text-align: center;
+    }
+    
+    .section-subtitle {
+        font-size: 0.8rem !important;
+    }
 }
