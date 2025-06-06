@@ -96,7 +96,14 @@ header .logo {
     transition: color 0.3s ease;
 }
 
-/* Mobile menu toggle - always white */
+/* Mobile menu toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
@@ -1086,7 +1093,7 @@ section {
 /* ====== RESPONSIVE DESIGN ====== */
 @media (max-width: 1200px) {
     .carousel-title {
-        font-size: 3rem !important;
+        font-size: 3rem;
     }
     
     .header {
@@ -1106,9 +1113,10 @@ section {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.9); /* Dark background for mobile menu */
+        background: rgba(0, 0, 0, 0.9);
         backdrop-filter: blur(10px);
         padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
     
     .navigation.active {
@@ -1118,11 +1126,20 @@ section {
     .navigation ul {
         flex-direction: column;
         gap: 1rem;
+        margin: 0;
+        padding: 0;
     }
     
     .navigation a {
-        color: #fff !important; /* Keep white in mobile menu */
+        color: #fff !important;
         text-shadow: none;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        display: block;
+    }
+    
+    .navigation a:hover {
+        color: #3498db !important;
     }
     
     .mobile-menu-toggle {
@@ -1131,6 +1148,7 @@ section {
     
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: rotate(-45deg) translate(-5px, 6px);
+        background: #fff !important;
     }
     
     .mobile-menu-toggle.active span:nth-child(2) {
@@ -1139,15 +1157,25 @@ section {
     
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: rotate(45deg) translate(-5px, -6px);
+        background: #fff !important;
     }
     
     .carousel-title {
-        font-size: 2.5rem !important;
+        font-size: 2.5rem;
         text-align: center;
     }
     
+    .carousel-subtitle {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .carousel-cta {
+        justify-content: center;
+    }
+    
     .section-title {
-        font-size: 2.2rem !important;
+        font-size: 2.2rem;
     }
     
     .benefits-grid {
@@ -1157,6 +1185,7 @@ section {
     
     .footer-container {
         grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
     
     .newsletter {
@@ -1166,6 +1195,7 @@ section {
     
     .company-stats {
         justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -1174,13 +1204,31 @@ section {
         padding: 1rem 1.5rem;
     }
     
+    .logo a {
+        font-size: 1.5rem;
+    }
+    
     .carousel-title {
-        font-size: 2rem !important;
+        font-size: 2rem;
+        line-height: 1.2;
     }
     
     .carousel-subtitle {
-        font-size: 1rem !important;
+        font-size: 1rem;
         text-align: center;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .carousel-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .carousel-cta .btn {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
     }
     
     .carousel-controls {
@@ -1198,7 +1246,11 @@ section {
     }
     
     .section-subtitle {
-        font-size: 0.8rem !important;
+        font-size: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
     }
     
     .careers-content {
@@ -1215,10 +1267,12 @@ section {
     
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     .footer-links {
         grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
     
     .newsletter {
@@ -1228,26 +1282,53 @@ section {
     .portfolio-filter ul {
         flex-wrap: wrap;
         gap: 1rem;
+        justify-content: center;
     }
     
     .company-stats {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .stat-item {
+        padding: 1rem;
     }
 }
 
 @media (max-width: 576px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .logo a {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-content {
+        padding: 1rem;
+    }
+    
     .footer-links {
         grid-template-columns: 1fr;
     }
     
     .newsletter-form {
         flex-direction: column;
+        gap: 0.5rem;
     }
     
     .newsletter-form input {
         border-radius: 4px;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
     }
     
     .newsletter-form button {
@@ -1256,12 +1337,15 @@ section {
     
     .benefit-card {
         padding: 1.2rem;
+        flex-direction: column;
+        text-align: center;
     }
     
     .benefit-icon-wrapper {
         width: 50px;
         height: 50px;
-        margin-right: 1rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
     
     .benefit-icon-wrapper i {
@@ -1274,5 +1358,33 @@ section {
     
     .benefit-description {
         font-size: 0.9rem;
+    }
+    
+    .portfolio-filter ul {
+        gap: 0.5rem;
+    }
+    
+    .portfolio-filter li {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Fix for very small screens */
+@media (max-width: 400px) {
+    .carousel-title {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        padding: 0.8rem;
     }
 }
