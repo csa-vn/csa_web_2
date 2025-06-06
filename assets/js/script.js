@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             this.currentSlide = 0;
             this.totalSlides = this.slides.length;
-            this.autoPlayInterval = 6000; // 6 seconds per slide
+            this.autoPlayInterval = 7000; // 7 seconds per slide
             this.autoPlay = null;
             this.isTransitioning = false;
             

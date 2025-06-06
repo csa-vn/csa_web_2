@@ -3,11 +3,9 @@
 $site_title = "CSAVietnamCo.";
 $nav_items = [
     'About' => '#about',
-    'Services' => '#services',
     'Portfolio' => '#portfolio',
     'Clients' => '#clients',
     'Blog' => '#blog',
-    'Contact' => '#contact',
     'HR' => '#hr'
 ];
 
@@ -528,7 +526,7 @@ $nav_items = [
         </section>
         
         <!-- HR / Careers section -->
-        <section id="hr" class="section-padding pb-5">
+        <section class="section-padding pb-5">
             <div class="container">
                 <!-- <div class="section-header text-center">
                     <span class="section-subtitle">Join Our Team</span>
@@ -586,7 +584,7 @@ $nav_items = [
                             </div>
                         </div>
                     
-                    <div class="current-openings pt-5">
+                    <div class="current-openings pt-5" id="hr">
                             <h3>Current Openings</h3>
                             <div class="job-card-wrapper">
                                 <div class="card job-card-custom h-100">
