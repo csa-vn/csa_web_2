@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
             this.slides = document.querySelectorAll('.carousel-slide');
             this.prevBtn = document.querySelector('.carousel-prev');
             this.nextBtn = document.querySelector('.carousel-next');
-            this.indicators = document.querySelectorAll('.indicator');
             
             this.currentSlide = 0;
             this.totalSlides = this.slides.length;
-            this.autoPlayInterval = 5000;
+            this.autoPlayInterval = 6000; // 6 seconds per slide
             this.autoPlay = null;
+            this.isTransitioning = false;
             
             this.init();
         }
@@ -52,16 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
         init() {
             if (!this.carousel || this.totalSlides === 0) return;
             
-            // Hide all indicators immediately
+            // Hide indicators
             this.hideIndicators();
             
+            // Setup event listeners
             this.setupEventListeners();
+            
+            // Start automatic sliding
             this.startAutoPlay();
-            this.showSlide(0);
+            
+            // Show first slide content
+            this.showSlideContent(0);
         }
 
         hideIndicators() {
-            // Hide any progress bars or indicators
             const indicatorElements = document.querySelectorAll('.carousel-indicators, .carousel-progress, .indicator, .progress-bar, .progress-container, .carousel-pagination');
             indicatorElements.forEach(element => {
                 element.style.display = 'none';
@@ -72,18 +76,23 @@ document.addEventListener("DOMContentLoaded", function () {
         setupEventListeners() {
             if (this.prevBtn) {
                 this.prevBtn.addEventListener('click', () => {
-                    this.prevSlide();
-                    this.resetAutoPlay();
+                    if (!this.isTransitioning) {
+                        this.prevSlide();
+                        this.resetAutoPlay();
+                    }
                 });
             }
 
             if (this.nextBtn) {
                 this.nextBtn.addEventListener('click', () => {
-                    this.nextSlide();
-                    this.resetAutoPlay();
+                    if (!this.isTransitioning) {
+                        this.nextSlide();
+                        this.resetAutoPlay();
+                    }
                 });
             }
 
+            // Pause on hover
             if (this.carousel) {
                 this.carousel.addEventListener('mouseenter', () => {
                     this.stopAutoPlay();
@@ -94,16 +103,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
+            // Keyboard navigation
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    this.prevSlide();
-                    this.resetAutoPlay();
-                } else if (e.key === 'ArrowRight') {
-                    this.nextSlide();
-                    this.resetAutoPlay();
+                if (!this.isTransitioning) {
+                    if (e.key === 'ArrowLeft') {
+                        this.prevSlide();
+                        this.resetAutoPlay();
+                    } else if (e.key === 'ArrowRight') {
+                        this.nextSlide();
+                        this.resetAutoPlay();
+                    }
                 }
             });
 
+            // Touch events for mobile
             this.setupTouchEvents();
         }
 
@@ -114,12 +127,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.carousel) {
                 this.carousel.addEventListener('touchstart', (e) => {
                     startX = e.touches[0].clientX;
-                });
+                }, { passive: true });
 
                 this.carousel.addEventListener('touchend', (e) => {
                     endX = e.changedTouches[0].clientX;
                     this.handleSwipe(startX, endX);
-                });
+                }, { passive: true });
             }
         }
 
@@ -127,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const threshold = 50;
             const diff = startX - endX;
 
-            if (Math.abs(diff) > threshold) {
+            if (Math.abs(diff) > threshold && !this.isTransitioning) {
                 if (diff > 0) {
                     this.nextSlide();
                 } else {
@@ -137,66 +150,88 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        showSlide(index) {
-            this.slides.forEach(slide => slide.classList.remove('active'));
-
-            if (this.slides[index]) {
-                this.slides[index].classList.add('active');
-            }
-
-            this.currentSlide = index;
-            this.animateSlideContent(index);
+        slideToPosition(slideIndex) {
+            if (this.isTransitioning) return;
+            
+            this.isTransitioning = true;
+            
+            // Calculate transform percentage
+            const translateX = -(slideIndex * 33.333); // Each slide is 33.333% wide
+            
+            // Apply transform
+            this.carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update current slide
+            this.currentSlide = slideIndex;
+            
+            // Hide all slide content
+            this.hideAllSlideContent();
+            
+            // Show current slide content with delay
+            setTimeout(() => {
+                this.showSlideContent(slideIndex);
+            }, 500);
+            
+            // Reset transition flag
+            setTimeout(() => {
+                this.isTransitioning = false;
+            }, 4000); // Match CSS transition duration
         }
 
-        animateSlideContent(index) {
-            const activeSlide = this.slides[index];
-            if (!activeSlide) return;
-
-            const title = activeSlide.querySelector('.carousel-title');
-            const subtitle = activeSlide.querySelector('.carousel-subtitle');
-            const cta = activeSlide.querySelector('.carousel-cta');
-
-            // Reset animations
-            [title, subtitle, cta].forEach(element => {
-                if (element) {
-                    element.style.animation = 'none';
-                    element.offsetHeight; // Trigger reflow
-                    element.style.animation = 'slideInUp 1s ease-out';
+        hideAllSlideContent() {
+            this.slides.forEach(slide => {
+                const content = slide.querySelector('.carousel-content');
+                if (content) {
+                    content.style.opacity = '0';
                 }
             });
+        }
+
+        showSlideContent(index) {
+            const slide = this.slides[index];
+            if (!slide) return;
+
+            const content = slide.querySelector('.carousel-content');
+            if (content) {
+                content.style.opacity = '1';
+            }
 
             // GSAP animations if available
             if (typeof gsap !== 'undefined') {
-                const elements = activeSlide.querySelectorAll('.split');
-                elements.forEach(element => {
-                    if (element._splitText) {
-                        gsap.fromTo(element._splitText.chars, 
-                            { opacity: 0, y: 30 },
-                            { opacity: 1, y: 0, duration: 1.2, stagger: 0.05, ease: "back.out(1.5)" }
-                        );
-                    }
-                });
+                const title = slide.querySelector('.carousel-title');
+                const subtitle = slide.querySelector('.carousel-subtitle');
+                const cta = slide.querySelector('.carousel-cta');
+
+                // Animate elements
+                gsap.fromTo(title, 
+                    { opacity: 0, y: 50 },
+                    { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "power3.out" }
+                );
+                
+                gsap.fromTo(subtitle, 
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: "power3.out" }
+                );
+                
+                gsap.fromTo(cta, 
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 1, delay: 0.9, ease: "power3.out" }
+                );
             }
         }
 
         nextSlide() {
-            const next = (this.currentSlide + 1) % this.totalSlides;
-            this.showSlide(next);
+            const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+            this.slideToPosition(nextIndex);
         }
 
         prevSlide() {
-            const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-            this.showSlide(prev);
-        }
-
-        goToSlide(index) {
-            if (index >= 0 && index < this.totalSlides) {
-                this.showSlide(index);
-            }
+            const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+            this.slideToPosition(prevIndex);
         }
 
         startAutoPlay() {
-            this.stopAutoPlay(); // Clear any existing interval
+            this.stopAutoPlay();
             
             this.autoPlay = setInterval(() => {
                 this.nextSlide();
@@ -214,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
             this.stopAutoPlay();
             setTimeout(() => {
                 this.startAutoPlay();
-            }, 1000); // Restart after 1 second
+            }, 1000);
         }
     }
 

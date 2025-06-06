@@ -75,15 +75,15 @@ $nav_items = [
             <div class="carousel-container">
                 <div class="carousel-wrapper">
                     <!-- Slide 1 -->
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <div class="carousel-bg" style="background-image: url('assets/images/pexels-fauxels-3183183.jpg');"></div>
                         <div class="carousel-overlay"></div>
                         <div class="container">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center h-100">
                                 <div class="col-lg-8 col-md-10">
                                     <div class="carousel-content">
-                                        <h1 class="carousel-title split text-light">Elevate Your Brand with Creative Solutions</h1>
-                                        <p class="carousel-subtitle split text-light">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
+                                        <h1 class="carousel-title text-light">Elevate Your Brand with Creative Solutions</h1>
+                                        <p class="carousel-subtitle text-light">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
                                         <div class="carousel-cta">
                                             <a href="#contact" class="btn btn-primary">Start Your Project</a>
                                             <a href="#portfolio" class="btn btn-outline">View Our Work</a>
@@ -99,11 +99,11 @@ $nav_items = [
                         <div class="carousel-bg" style="background-image: url('assets/images/pexels-fauxels-3184423.jpg');"></div>
                         <div class="carousel-overlay"></div>
                         <div class="container">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center h-100">
                                 <div class="col-lg-8 col-md-10">
                                     <div class="carousel-content">
-                                        <h1 class="carousel-title split text-light">Transform Ideas Into Digital Reality</h1>
-                                        <p class="carousel-subtitle split text-light">From concept to execution, we deliver innovative digital solutions that exceed expectations and drive measurable results.</p>
+                                        <h1 class="carousel-title text-light">Transform Ideas Into Digital Reality</h1>
+                                        <p class="carousel-subtitle text-light">From concept to execution, we deliver innovative digital solutions that exceed expectations and drive measurable results.</p>
                                         <div class="carousel-cta">
                                             <a href="#services" class="btn btn-primary">Our Services</a>
                                             <a href="#about" class="btn btn-outline">Learn More</a>
@@ -119,11 +119,11 @@ $nav_items = [
                         <div class="carousel-bg" style="background-image: url('assets/images/pexels-pixabay-45853.jpg');"></div>
                         <div class="carousel-overlay"></div>
                         <div class="container">
-                            <div class="row align-items-center">
+                            <div class="row align-items-center h-100">
                                 <div class="col-lg-8 col-md-10">
                                     <div class="carousel-content">
-                                        <h1 class="carousel-title split text-light">Your Success Is Our Mission</h1>
-                                        <p class="carousel-subtitle split text-light">Partner with us to unlock your brand's potential and achieve extraordinary growth in the digital landscape.</p>
+                                        <h1 class="carousel-title text-light">Your Success Is Our Mission</h1>
+                                        <p class="carousel-subtitle text-light">Partner with us to unlock your brand's potential and achieve extraordinary growth in the digital landscape.</p>
                                         <div class="carousel-cta">
                                             <a href="#portfolio" class="btn btn-primary">See Results</a>
                                             <a href="#clients" class="btn btn-outline">Our Clients</a>
@@ -143,18 +143,6 @@ $nav_items = [
                     <button class="carousel-btn carousel-next" aria-label="Next slide">
                         <i class="fas fa-chevron-right"></i>
                     </button>
-                </div>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
-                    <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
-                    <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
-                </div>
-
-                <!-- Carousel Progress Bar -->
-                <div class="carousel-progress">
-                    <div class="progress-bar"></div>
                 </div>
             </div>
         </section>
