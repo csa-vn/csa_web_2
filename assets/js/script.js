@@ -1,35 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // --- Chức năng 1: Thay đổi màu header khi cuộn ---
-    const headerLinks = document.querySelectorAll(
-        "header a, header .dropdown-toggle"
-    );
+    // ====== HEADER SCROLL EFFECT ====== 
+    const header = document.querySelector('.header');
+    const headerLinks = document.querySelectorAll("header a, header .dropdown-toggle, .header a");
 
     window.addEventListener("scroll", function () {
-        // Thay đổi màu header sau khi cuộn qua phần hero
-        // Giả sử phần hero/hình ảnh đầu tiên cao khoảng 500px
-        if (window.scrollY > 500) {
+        // Keep header always transparent, only adjust text visibility if needed
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+            // Keep all text white even when scrolled
             headerLinks.forEach((link) => {
-                link.style.color = "#000"; // Thay đổi thành màu đen khi cuộn
+                link.style.color = "#fff";
+                link.style.textShadow = "0 2px 4px rgba(0,0,0,0.5)";
             });
-            // Tùy chọn: Thêm class để thay đổi màu nền của header
-            // if (header) header.classList.add("scrolled");
         } else {
+            header.classList.remove('scrolled');
             headerLinks.forEach((link) => {
-                link.style.color = ""; // Đặt lại màu mặc định
+                link.style.color = "#fff";
+                link.style.textShadow = "0 2px 4px rgba(0,0,0,0.5)";
             });
-            // Tùy chọn: Xóa class để đặt lại màu nền của header
-            // if (header) header.classList.remove("scrolled");
         }
     });
 
-    // --- Chức năng 2: Hiệu ứng SplitText với GSAP và ScrollTrigger ---
-
-    // Đăng ký các plugin GSAP
-    // QUAN TRỌNG: Đảm bảo cả SplitText.min.js và ScrollTrigger.min.js
-    // đã được tải trong HTML TRƯỚC file script.js này.
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
-
-    // Khởi tạo navigation mobile
+    // ====== MOBILE NAVIGATION ======
     const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
     const navigation = document.querySelector(".navigation");
 
@@ -40,120 +32,299 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Đợi fonts tải xong trước khi thực hiện SplitText
-    document.fonts.ready.then(() => {
-        console.log("Fonts loaded, initializing animations");
+    // ====== HERO CAROUSEL CLASS ======
+    class HeroCarousel {
+        constructor() {
+            this.carousel = document.querySelector('.carousel-wrapper');
+            this.slides = document.querySelectorAll('.carousel-slide');
+            this.prevBtn = document.querySelector('.carousel-prev');
+            this.nextBtn = document.querySelector('.carousel-next');
+            this.indicators = document.querySelectorAll('.indicator');
+            
+            this.currentSlide = 0;
+            this.totalSlides = this.slides.length;
+            this.autoPlayInterval = 5000;
+            this.autoPlay = null;
+            
+            this.init();
+        }
 
-        // Animation cho header
-        gsap.from(".header", {
-            y: -50,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-        });
+        init() {
+            if (!this.carousel || this.totalSlides === 0) return;
+            
+            // Hide all indicators immediately
+            this.hideIndicators();
+            
+            this.setupEventListeners();
+            this.startAutoPlay();
+            this.showSlide(0);
+        }
 
-        // Hero section animation
-        gsap.from(".hero-image", {
-            x: 100,
-            opacity: 0,
-            duration: 1.2,
-            delay: 0.5,
-            ease: "power3.out",
-        });
-
-        // Lấy tất cả các phần tử có class "split"
-        const splitElements = document.querySelectorAll(".split");
-
-        splitElements.forEach((element) => {
-            // Thiết lập SplitText chỉ khi scroll đến phần tử
-            let splitTextTrigger = ScrollTrigger.create({
-                trigger: element,
-                start: "top 80%",
-                onEnter: function () {
-                    // Khởi tạo SplitText cho phần tử khi scroll đến
-                    const mySplitText = new SplitText(element, {
-                        type: "words,chars",
-                        charsClass: "char",
-                        wordsClass: "word",
-                    });
-
-                    // Thiết lập trạng thái ban đầu
-                    gsap.set(mySplitText.chars, {
-                        opacity: 0,
-                        y: 30,
-                    });
-
-                    // Animation hiển thị từng ký tự
-                    gsap.to(mySplitText.chars, {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        duration: 1.2,
-                        stagger: 0.05,
-                        ease: "back.out(1.5)",
-                    });
-
-                    // Chỉ trigger một lần
-                    splitTextTrigger.kill();
-                },
+        hideIndicators() {
+            // Hide any progress bars or indicators
+            const indicatorElements = document.querySelectorAll('.carousel-indicators, .carousel-progress, .indicator, .progress-bar, .progress-container, .carousel-pagination');
+            indicatorElements.forEach(element => {
+                element.style.display = 'none';
+                element.style.visibility = 'hidden';
             });
-        });
+        }
 
-        // Animation cho các section khác khi scroll
-        gsap.utils.toArray(".section-header").forEach((section) => {
-            gsap.from(section, {
-                y: 50,
+        setupEventListeners() {
+            if (this.prevBtn) {
+                this.prevBtn.addEventListener('click', () => {
+                    this.prevSlide();
+                    this.resetAutoPlay();
+                });
+            }
+
+            if (this.nextBtn) {
+                this.nextBtn.addEventListener('click', () => {
+                    this.nextSlide();
+                    this.resetAutoPlay();
+                });
+            }
+
+            if (this.carousel) {
+                this.carousel.addEventListener('mouseenter', () => {
+                    this.stopAutoPlay();
+                });
+
+                this.carousel.addEventListener('mouseleave', () => {
+                    this.startAutoPlay();
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    this.prevSlide();
+                    this.resetAutoPlay();
+                } else if (e.key === 'ArrowRight') {
+                    this.nextSlide();
+                    this.resetAutoPlay();
+                }
+            });
+
+            this.setupTouchEvents();
+        }
+
+        setupTouchEvents() {
+            let startX = 0;
+            let endX = 0;
+
+            if (this.carousel) {
+                this.carousel.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                this.carousel.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    this.handleSwipe(startX, endX);
+                });
+            }
+        }
+
+        handleSwipe(startX, endX) {
+            const threshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    this.nextSlide();
+                } else {
+                    this.prevSlide();
+                }
+                this.resetAutoPlay();
+            }
+        }
+
+        showSlide(index) {
+            this.slides.forEach(slide => slide.classList.remove('active'));
+
+            if (this.slides[index]) {
+                this.slides[index].classList.add('active');
+            }
+
+            this.currentSlide = index;
+            this.animateSlideContent(index);
+        }
+
+        animateSlideContent(index) {
+            const activeSlide = this.slides[index];
+            if (!activeSlide) return;
+
+            const title = activeSlide.querySelector('.carousel-title');
+            const subtitle = activeSlide.querySelector('.carousel-subtitle');
+            const cta = activeSlide.querySelector('.carousel-cta');
+
+            // Reset animations
+            [title, subtitle, cta].forEach(element => {
+                if (element) {
+                    element.style.animation = 'none';
+                    element.offsetHeight; // Trigger reflow
+                    element.style.animation = 'slideInUp 1s ease-out';
+                }
+            });
+
+            // GSAP animations if available
+            if (typeof gsap !== 'undefined') {
+                const elements = activeSlide.querySelectorAll('.split');
+                elements.forEach(element => {
+                    if (element._splitText) {
+                        gsap.fromTo(element._splitText.chars, 
+                            { opacity: 0, y: 30 },
+                            { opacity: 1, y: 0, duration: 1.2, stagger: 0.05, ease: "back.out(1.5)" }
+                        );
+                    }
+                });
+            }
+        }
+
+        nextSlide() {
+            const next = (this.currentSlide + 1) % this.totalSlides;
+            this.showSlide(next);
+        }
+
+        prevSlide() {
+            const prev = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+            this.showSlide(prev);
+        }
+
+        goToSlide(index) {
+            if (index >= 0 && index < this.totalSlides) {
+                this.showSlide(index);
+            }
+        }
+
+        startAutoPlay() {
+            this.stopAutoPlay(); // Clear any existing interval
+            
+            this.autoPlay = setInterval(() => {
+                this.nextSlide();
+            }, this.autoPlayInterval);
+        }
+
+        stopAutoPlay() {
+            if (this.autoPlay) {
+                clearInterval(this.autoPlay);
+                this.autoPlay = null;
+            }
+        }
+
+        resetAutoPlay() {
+            this.stopAutoPlay();
+            setTimeout(() => {
+                this.startAutoPlay();
+            }, 1000); // Restart after 1 second
+        }
+    }
+
+    // Initialize Hero Carousel
+    const heroCarousel = new HeroCarousel();
+
+    // ====== GSAP ANIMATIONS ======
+    // Register GSAP plugins
+    if (typeof gsap !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
+
+        // Wait for fonts to load before initializing animations
+        document.fonts.ready.then(() => {
+            console.log("Fonts loaded, initializing animations");
+
+            // Header animation
+            gsap.from(".header", {
+                y: -50,
                 opacity: 0,
                 duration: 1,
-                scrollTrigger: {
-                    trigger: section,
+                ease: "power3.out",
+            });
+
+            // SplitText animations
+            const splitElements = document.querySelectorAll(".split");
+
+            splitElements.forEach((element) => {
+                let splitTextTrigger = ScrollTrigger.create({
+                    trigger: element,
                     start: "top 80%",
-                },
-            });
-        });
+                    onEnter: function () {
+                        const mySplitText = new SplitText(element, {
+                            type: "words,chars",
+                            charsClass: "char",
+                            wordsClass: "word",
+                        });
 
-        // Animation cho các service cards
-        gsap.utils.toArray(".service-card").forEach((card, index) => {
-            gsap.from(card, {
-                y: 100,
+                        // Store reference for carousel animations
+                        element._splitText = mySplitText;
+
+                        gsap.set(mySplitText.chars, {
+                            opacity: 0,
+                            y: 30,
+                        });
+
+                        gsap.to(mySplitText.chars, {
+                            opacity: 1,
+                            y: 0,
+                            scale: 1,
+                            duration: 1.2,
+                            stagger: 0.05,
+                            ease: "back.out(1.5)",
+                        });
+
+                        splitTextTrigger.kill();
+                    },
+                });
+            });
+
+            // Section animations
+            gsap.utils.toArray(".section-header").forEach((section) => {
+                gsap.from(section, {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                    },
+                });
+            });
+
+            // Portfolio animations
+            gsap.utils.toArray(".portfolio-card").forEach((card, index) => {
+                gsap.from(card, {
+                    scale: 0.8,
+                    opacity: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                    },
+                });
+            });
+
+            // Testimonial animations
+            gsap.utils.toArray(".testimonial-card").forEach((card, index) => {
+                gsap.from(card, {
+                    x: index % 2 === 0 ? -50 : 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                    },
+                });
+            });
+
+            // Carousel control animations
+            gsap.from(".carousel-controls", {
+                x: -50,
                 opacity: 0,
-                duration: 0.8,
-                delay: index * 0.1,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                },
+                duration: 1,
+                delay: 1,
+                ease: "power3.out",
             });
         });
+    }
 
-        // Animation cho portfolio items
-        gsap.utils.toArray(".portfolio-card").forEach((card, index) => {
-            gsap.from(card, {
-                scale: 0.8,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                },
-            });
-        });
-
-        // Animation cho testimonials
-        gsap.utils.toArray(".testimonial-card").forEach((card, index) => {
-            gsap.from(card, {
-                x: index % 2 === 0 ? -50 : 50,
-                opacity: 0,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                },
-            });
-        });
-    });
-
-    // Smooth scroll cho các liên kết navigation
+    // ====== SMOOTH SCROLL NAVIGATION ======
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -243,5 +414,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Console log để xác nhận script đã tải
-    console.log("Animation script loaded and initialized");
+    console.log("Animation script with Hero Carousel loaded and initialized");
 });

@@ -48,14 +48,14 @@ $nav_items = [
         <!-- Header transparent -->
         <header class="header">
             <div class="logo">
-                <a href="#"><?php echo $site_title; ?></a>
+                <a href="#home"><?php echo $site_title; ?></a>
             </div>
             <nav class="navigation">
                 <ul>
                     <?php foreach($nav_items as $name => $url): ?>
                         <?php if($name == 'HR'): ?>
                             <li class="dropdown">
-                                <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+                                <a href="<?php echo $url; ?>"><?php echo $name; ?> <span class="dropdown-arrow">▼</span></a>
                             </li>
                         <?php else: ?>
                             <li><a href="<?php echo $url; ?>"><?php echo $name; ?></a></li>
@@ -70,24 +70,91 @@ $nav_items = [
             </div>
         </header>
 
-        <!-- Hero section -->
-        <section class="hero" id="home">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="hero-title split text-light">Elevate Your Brand with Creative Solutions</h1>
-                        <p class="hero-subtitle split text-light">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
-                        <div class="hero-cta">
-                            <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                            <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+        <!-- Hero Carousel Section -->
+        <section class="hero-carousel" id="home">
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="carousel-bg" style="background-image: url('assets/images/pexels-fauxels-3183183.jpg');"></div>
+                        <div class="carousel-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 col-md-10">
+                                    <div class="carousel-content">
+                                        <h1 class="carousel-title split text-light">Elevate Your Brand with Creative Solutions</h1>
+                                        <p class="carousel-subtitle split text-light">We craft digital experiences that drive growth and transform businesses through strategic design and innovation.</p>
+                                        <div class="carousel-cta">
+                                            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                                            <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="hero-image">
-                            <!-- Placeholder for hero image -->
-                            <img src="assets/images/pexels-pixabay-459203.jpg" alt="Creative agency workspace" class="img-fluid">
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-bg" style="background-image: url('assets/images/pexels-fauxels-3184423.jpg');"></div>
+                        <div class="carousel-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 col-md-10">
+                                    <div class="carousel-content">
+                                        <h1 class="carousel-title split text-light">Transform Ideas Into Digital Reality</h1>
+                                        <p class="carousel-subtitle split text-light">From concept to execution, we deliver innovative digital solutions that exceed expectations and drive measurable results.</p>
+                                        <div class="carousel-cta">
+                                            <a href="#services" class="btn btn-primary">Our Services</a>
+                                            <a href="#about" class="btn btn-outline">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-bg" style="background-image: url('assets/images/pexels-pixabay-45853.jpg');"></div>
+                        <div class="carousel-overlay"></div>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-8 col-md-10">
+                                    <div class="carousel-content">
+                                        <h1 class="carousel-title split text-light">Your Success Is Our Mission</h1>
+                                        <p class="carousel-subtitle split text-light">Partner with us to unlock your brand's potential and achieve extraordinary growth in the digital landscape.</p>
+                                        <div class="carousel-cta">
+                                            <a href="#portfolio" class="btn btn-primary">See Results</a>
+                                            <a href="#clients" class="btn btn-outline">Our Clients</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn carousel-next" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                    <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                    <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                </div>
+
+                <!-- Carousel Progress Bar -->
+                <div class="carousel-progress">
+                    <div class="progress-bar"></div>
                 </div>
             </div>
         </section>
@@ -124,133 +191,6 @@ $nav_items = [
                     <div class="col-lg-6">
                         <div class="about-image">
                             <img src="assets/images/pexels-fauxels-3183183.jpg" alt="Our team at work" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Services section -->
-        <section id="services" class="section-padding bg-light pb-5">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">What We Do</span>
-                    <h2 class="section-title split">Our Creative Services</h2>
-                    <p class="section-desc">We offer comprehensive solutions to help your business stand out in the digital landscape</p>
-                </div>
-                
-                <div class="row">
-                    <!-- Service 1 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Brand Identity</h3>
-                                <p>We create compelling brand identities that resonate with your target audience and set you apart from competitors.</p>
-                                <ul class="service-features">
-                                    <li>Logo Design</li>
-                                    <li>Brand Guidelines</li>
-                                    <li>Visual Identity</li>
-                                </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Service 2 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Web Development</h3>
-                                <p>Custom websites and applications built with the latest technologies to deliver exceptional user experiences.</p>
-                                <ul class="service-features">
-                                    <li>Responsive Design</li>
-                                    <li>E-commerce Solutions</li>
-                                    <li>CMS Integration</li>
-                                </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Service 3 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Digital Marketing</h3>
-                                <p>Strategic marketing campaigns that drive traffic, engagement, and conversions for sustainable growth.</p>
-                                <ul class="service-features">
-                                    <li>SEO Optimization</li>
-                                    <li>Social Media Marketing</li>
-                                    <li>PPC Campaigns</li>
-                                </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Service 4 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-camera"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>Content Creation</h3>
-                                <p>High-quality content that tells your brand story and engages your audience across all platforms.</p>
-                                <ul class="service-features">
-                                    <li>Photography</li>
-                                    <li>Videography</li>
-                                    <li>Copywriting</li>
-                                </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Service 5 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3>UI/UX Design</h3>
-                                <p>User-centered design that creates intuitive, enjoyable experiences for websites and applications.</p>
-                                <ul class="service-features">
-                                    <li>User Research</li>
-                                    <li>Wireframing & Prototyping</li>
-                                    <li>Usability Testing</li>
-                                </ul>
-                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Service 6 -->
-                    <div class="col-lg-4 col-md-6 p-3">
-                        <div class="service-card">
-                            <div class="service-icon">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <div class="service-content">
-                                <h3 class="font-montserrat font-semibold">Strategy & Consulting</h3>
-                                <p class="font-opensans font-normal">Expert guidance to help you make informed decisions and develop effective digital strategies.</p>
-                                <ul class="service-features font-inter font-normal">
-                                    <li>Market Research</li>
-                                    <li>Competitive Analysis</li>
-                                    <li>Growth Strategy</li>
-                                </ul>
-                                <a href="#" class="service-link font-roboto font-medium">Learn More <i class="fas fa-arrow-right"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -595,108 +535,6 @@ $nav_items = [
                 
                 <div class="text-center mt-5">
                     <a href="#" class="btn btn-outline-primary">View All Posts</a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact section -->
-        <section id="contact" class="section-padding bg-light pb-5">
-            <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">Get In Touch</span>
-                    <h2 class="section-title split">Let's Start a Project Together</h2>
-                    <p class="section-desc">Reach out to discuss how we can help your business grow</p>
-                </div>
-                
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Office Address</h4>
-                                    <p>123 Creative Street, District 1, Ho Chi Minh City, Vietnam</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Email Us</h4>
-                                    <p>info@csavietnamco.com</p>
-                                    <p>support@csavietnamco.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Call Us</h4>
-                                    <p>+84 (0) 123 456 789</p>
-                                    <p>+84 (0) 987 654 321</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h4>Working Hours</h4>
-                                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                    <p>Weekend: By Appointment</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-6">
-                        <div class="contact-form">
-                            <form id="contactForm">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" placeholder="Your Phone">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" placeholder="Subject">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12">
-                                        <button type="submit" class="btn btn-primary">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
